@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MainActivity">
+        <attr name="main_bg_image" format="reference"/>
+        <attr name="main_bg_image_land" format="reference"/>
+        <attr name="colorTextReport" format="reference"/>
+    </declare-styleable>
+</resources>

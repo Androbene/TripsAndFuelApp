@@ -1,0 +1,23 @@
+<resources>
+
+    <string-array name="ratio">
+        <item>x 1.00</item>
+        <item>x 1.05</item>
+        <item>x 1.10</item>
+        <item>x 1.15</item>
+        <item>x 1.20</item>
+        <item>x 1.25</item>
+        <item>x 1.30</item>
+    </string-array>
+
+    <string-array name="ratio_values">
+        <item>1.00</item>
+        <item>1.05</item>
+        <item>1.10</item>
+        <item>1.15</item>
+        <item>1.20</item>
+        <item>1.25</item>
+        <item>1.30</item>
+    </string-array>
+
+</resources>

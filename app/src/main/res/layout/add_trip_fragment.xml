@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/MyTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/new_trip_title"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewDestinationTitle"
+            style="@style/MyTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/destination_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <EditText
+            android:id="@+id/etDestination"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/textViewDestinationTitle"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDestinationTitle"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/date_default_text"
+            android:textColor="?colorAccent"
+            android:textSize="9pt"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/etDestination"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etDestination" />
+
+        <TextView
+            android:id="@+id/tvDistanceTitle"
+            style="@style/MyTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/distance_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDestination" />
+
+        <EditText
+            android:id="@+id/etDistance"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/tvDistanceTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvDistanceTitle"
+            app:layout_constraintWidth_max="150dp"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/etConsumption"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/etDistance"
+            app:layout_constraintEnd_toStartOf="@+id/etFuelPrice"
+            app:layout_constraintStart_toEndOf="@+id/etDistance"
+            app:layout_constraintWidth_max="150dp"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/etFuelPrice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/etConsumption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_max="150dp"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/tvConsumptionTitle"
+            style="@style/MyTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consumption_title"
+            app:layout_constraintStart_toStartOf="@+id/etConsumption"
+            app:layout_constraintTop_toTopOf="@+id/tvDistanceTitle" />
+
+        <TextView
+            android:id="@+id/tvFuelprice"
+            style="@style/MyTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fuel_price_title"
+            app:layout_constraintStart_toStartOf="@+id/etFuelPrice"
+            app:layout_constraintTop_toTopOf="@+id/tvConsumptionTitle" />
+
+        <TextView
+            android:id="@+id/tvCommentsTitle"
+            style="@style/MyTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/comments_title"
+            app:layout_constraintStart_toStartOf="@+id/etDistance"
+            app:layout_constraintTop_toBottomOf="@+id/etDistance" />
+
+        <EditText
+            android:id="@+id/etComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvCommentsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvCommentsTitle"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/btn_save_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etComments" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

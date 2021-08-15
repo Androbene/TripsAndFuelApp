@@ -1,0 +1,14 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/preferences_header">
+
+        <ListPreference
+            app:defaultValue="1.00"
+            app:entries="@array/ratio"
+            app:entryValues="@array/ratio_values"
+            app:key="fuel_ratio"
+            app:singleLineTitle="false"
+            app:title="@string/pref_ratio_title"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

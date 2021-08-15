@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Trips and Fuel</string>
+    <string name="fuel_image">Fuel image</string>
+    <string name="add_trip">Add trip Action Button</string>
+    <string name="big_fuel">Не многовато ли машинка топлива берёт?</string>
+    <string name="big_trip">Реально столько проехали за день?</string>
+    <string name="big_price">Где такие бешенные цены???</string>
+    <string name="distance_title">Пробег</string>
+    <string name="consumption_title">Расход</string>
+    <string name="fuel_price_title">Цена</string>
+    <string name="cost_title">Стоимость</string>
+    <string name="lorem_">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</string>
+    <string name="new_trip_title">Новая поездка</string>
+    <string name="edit_trip_title">Редактирование поездки</string>
+    <string name="destination_title">Место поездки</string>
+    <string name="comments_title">Комментарии</string>
+    <string name="btn_save_text">Сохранить</string>
+    <string name="item_remove_search">Поиск</string>
+    <string name="item_settings">Настройки</string>
+    <string name="item_share">Поделиться</string>
+    <string name="data_loading">Загрузка данных</string>
+    <string name="report_exception">"Невозможно постать отчёт! Слишком большой текст!"</string>
+
+    <!-- PagerFragment Titles -->
+    <string name="all_trips">"Все поездки"</string>
+    <string name="report">"Отчётность"</string>
+
+    <!-- Context Menu Titles -->
+    <string name="context_item_delete">Удалить</string>
+    <string name="context_item_edit">Редактировать</string>
+
+    <!-- Preference Titles -->
+    <string name="preferences_header">Настройки расчёта</string>
+    <string name="pref_ratio_title">Коэффициент расхода для автомобилей с ГБО</string>
+    <string name="date_default_text">08 мар 2021г.</string>
+ </resources>
