@@ -1,7 +1,8 @@
-package ua.androbene.tripsandfuel
+package ua.androbene.tripsandfuel.user_interface
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import ua.androbene.tripsandfuel.R
 
 class MainActivity : AppCompatActivity() {
 

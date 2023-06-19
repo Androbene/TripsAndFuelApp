@@ -1,18 +1,18 @@
-package ua.androbene.tripsandfuel.trips
+package ua.androbene.tripsandfuel.user_interface.trips
 
 import android.app.DatePickerDialog
 import android.icu.text.DateFormat
 import android.icu.text.SimpleDateFormat
 import android.icu.util.Calendar
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.TextView
-import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import ua.androbene.tripsandfuel.databinding.AddTripFragmentBinding
+import ua.androbene.tripsandfuel.databinding.FragmentAdTripBinding
+import ua.androbene.tripsandfuel.user_interface.base.BaseFragment
 import java.util.*
 
-abstract class BaseTripFragment : Fragment() {
+abstract class BaseTripFragment : BaseFragment<FragmentAdTripBinding>() {
 
     companion object {
         const val DISTANCE_LIMIT = 10000f
@@ -20,8 +20,7 @@ abstract class BaseTripFragment : Fragment() {
         const val PRICE_LIMIT = 100f
     }
 
-    protected var _binding: AddTripFragmentBinding? = null
-    protected val bind get() = _binding!!  // This property is only valid between onCreateView and onDestroyView
+    override fun inflateFrag(inflater: LayoutInflater) = FragmentAdTripBinding .inflate(inflater)
 
     protected val tripViewModel: TripsViewModel by activityViewModels()
     protected val calendar: Calendar = Calendar.getInstance() // temporary init with current date
@@ -35,15 +34,6 @@ abstract class BaseTripFragment : Fragment() {
         prefsFuelRatio =
             requireActivity().getSharedPreferences(packageName + "_preferences", 0)
                 .getString("fuel_ratio", "1.0")!!.toFloat()
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
-    protected fun toastMessage(resID: Int) {
-        Toast.makeText(activity, getString(resID), Toast.LENGTH_SHORT).show()
     }
 
     protected fun getIdDependOnDate(): Long {

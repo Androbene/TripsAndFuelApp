@@ -19,7 +19,7 @@
     <string name="item_settings">Настройки</string>
     <string name="item_share">Поделиться</string>
     <string name="data_loading">Загрузка данных</string>
-    <string name="report_exception">"Невозможно постать отчёт! Слишком большой текст!"</string>
+    <string name="report_exception">"Невозможно послать отчёт! Слишком большой текст!"</string>
 
     <!-- PagerFragment Titles -->
     <string name="all_trips">"Все поездки"</string>

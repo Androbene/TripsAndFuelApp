@@ -1,4 +1,4 @@
-package ua.androbene.tripsandfuel.report
+package ua.androbene.tripsandfuel.user_interface.report
 
 import android.app.Application
 import android.icu.text.DateFormat
@@ -60,7 +60,7 @@ class ReportViewModel(val app: Application) : AndroidViewModel(app) {
         for (t in reportedTrips.value!!) {
             val tripFuelCost = t.distance / 100f * t.consumption * t.fuelPrice * 1.2f
             fuelCost += tripFuelCost
-            depreciationCost += t.distance // formula for depreciation
+            depreciationCost += t.distance * 1.5f // formula for depreciation //////////////////////
             textDetails.append("\n ").append(getTripDateAsString(t)).append("\n ")
                 .append(t.destination)
                 .append("\n ")
@@ -70,7 +70,7 @@ class ReportViewModel(val app: Application) : AndroidViewModel(app) {
                         "%.2f",
                         tripFuelCost
                     )
-                ).append("грн + Амортизация: ").append(t.distance).append("грн")
+                ).append("грн + Амортизация: ").append(t.distance * 1.5f).append("грн") ///////////////////////
                 .append("\n ----------------------------------------")
         }
         val fromDate =
@@ -80,7 +80,7 @@ class ReportViewModel(val app: Application) : AndroidViewModel(app) {
         val textFinal = StringBuilder()
         textFinal.append("\n Итого за период: $fromDate - $tillDate\n        Топливо - ")
             .append(String.format("%.2f", fuelCost))
-            .append("грн\n        Амортизация: ").append(String.format("%.2f", depreciationCost))
+            .append("грн\n        Амортизация: ").append(String.format("%.2f", depreciationCost)) ///////////////
             .append("грн")
             .append("\n ******************************\n").append(textDetails.toString())
         return textFinal.toString()

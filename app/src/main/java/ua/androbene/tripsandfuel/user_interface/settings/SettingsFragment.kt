@@ -1,7 +1,8 @@
-package ua.androbene.tripsandfuel
+package ua.androbene.tripsandfuel.user_interface.settings
 
 import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat
+import ua.androbene.tripsandfuel.R
 
 class SettingsFragment : PreferenceFragmentCompat() {
 

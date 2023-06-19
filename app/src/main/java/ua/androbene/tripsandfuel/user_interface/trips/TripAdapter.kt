@@ -1,4 +1,4 @@
-package ua.androbene.tripsandfuel.trips
+package ua.androbene.tripsandfuel.user_interface.trips
 
 import android.icu.text.DateFormat
 import android.icu.util.Calendar
@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import ua.androbene.tripsandfuel.R
 import ua.androbene.tripsandfuel.database.Trip
-import ua.androbene.tripsandfuel.databinding.TripItemBinding
+import ua.androbene.tripsandfuel.databinding.ItemTripBinding
 import java.util.*
 
 class TripAdapter : RecyclerView.Adapter<TripAdapter.TripViewHolder>(), Filterable {
@@ -46,7 +46,7 @@ class TripAdapter : RecyclerView.Adapter<TripAdapter.TripViewHolder>(), Filterab
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TripViewHolder {
-        val binding = TripItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemTripBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return TripViewHolder(binding)
     }
 
@@ -87,7 +87,7 @@ class TripAdapter : RecyclerView.Adapter<TripAdapter.TripViewHolder>(), Filterab
     }
 
     /////////////////////////////////////  HOLDER   ////////////////////////////////////////////////
-    inner class TripViewHolder(private val bind: TripItemBinding) :
+    inner class TripViewHolder(private val bind: ItemTripBinding) :
         RecyclerView.ViewHolder(bind.root), View.OnCreateContextMenuListener {
 
         init {
